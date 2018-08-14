@@ -1,0 +1,7 @@
+InvestimentManager
+    Place Buy / Sell Order (OrderManager)
+    Retrieve Stock Price for a date (DataManager)
+    Check Position (AccountManager) on Cash and Securities
+    Generate Statistics
+Simulation
+    
