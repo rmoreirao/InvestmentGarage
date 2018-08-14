@@ -2,6 +2,8 @@ from datetime import datetime
 from alpha_vantage.timeseries import TimeSeries
 import matplotlib.pyplot as plt
 import pandas as pd
+from pathlib import Path
+
 
 # print(data)
 # data[['4. close']].plot()
@@ -18,10 +20,17 @@ COL_VOL = '6. volume'
 COL_DIV = '7. dividend amount'
 COL_SPLIT = '8. split coefficient'
 
+
+
 def get_daily_quotes(start_date: datetime, end_date: datetime, symbol:str):
-    ts = TimeSeries(key='ZXTHHYQU7E5O8R75', output_format='pandas')
-    data:pd.DataFrame
-    data, meta_data = ts.get_daily_adjusted(symbol=symbol, outputsize='compact')
-    print (data.columns.values)
-    return data.ix[start_date.strftime('%Y-%m-%d'):end_date.strftime('%Y-%m-%d')]
+    file_path =  '../quotes_cache/' + symbol + '.pkl'
+    df: pd.DataFrame
+    if Path(file_path).is_file():
+        df = pd.read_pickle(file_path)
+    else:
+        ts = TimeSeries(key='ZXTHHYQU7E5O8R75', output_format='pandas')
+        df, meta_data = ts.get_daily_adjusted(symbol=symbol, outputsize='compact')
+        df.to_pickle(file_path)
+    return df.ix[start_date.strftime('%Y-%m-%d'):end_date.strftime('%Y-%m-%d')]
+
 
