@@ -1,7 +1,7 @@
 
 from datetime import datetime
 
-from indicators.base_indicator import base_indicator
+from indicator.base_indicator import base_indicator
 from manager import quotes_manager
 import pandas as pd
 import matplotlib.pyplot as plt
