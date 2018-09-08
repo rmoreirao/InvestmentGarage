@@ -1,6 +1,7 @@
 import domain
-from domain.order import order_type, order
-from domain.order import portfolio
+from domain.order import order
+from domain.order_type import order_type
+from domain.portfolio import portfolio
 from manager import quotes_manager
 from datetime import datetime
 import pandas as pd
