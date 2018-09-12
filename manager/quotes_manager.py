@@ -1,8 +1,10 @@
 from datetime import datetime
+
+import pathlib
 from alpha_vantage.timeseries import TimeSeries
 import matplotlib.pyplot as plt
 import pandas as pd
-from pathlib import Path
+from pathlib import Path,WindowsPath
 
 
 # print(data)
@@ -20,9 +22,17 @@ COL_VOL = '6. volume'
 COL_DIV = '7. dividend amount'
 COL_SPLIT = '8. split coefficient'
 
-
+_cache_folder = None
 
 def get_daily_quotes(start_date: datetime, end_date: datetime, symbol:str):
+    if not _cache_folder:
+        curr_path_parts = list(Path.cwd().parts)
+        for i in reversed(range(len(curr_path_parts))):
+            if curr_path_parts[i] != 'InvestimentGarage':
+                curr_path_parts.pop(i)
+            else:
+                break
+        _cache_folder = Path(curr_path_parts)
     file_path =  '../quotes_cache/' + symbol + '.pkl'
     df: pd.DataFrame
     if Path(file_path).is_file():
@@ -30,7 +40,10 @@ def get_daily_quotes(start_date: datetime, end_date: datetime, symbol:str):
     else:
         ts = TimeSeries(key='ZXTHHYQU7E5O8R75', output_format='pandas')
         df, meta_data = ts.get_daily_adjusted(symbol=symbol, outputsize='compact')
-        df.to_pickle(file_path)
+        try:
+            df.to_pickle(file_path)
+        except:
+            print("Error trying to save pickle quote: " + file_path)
     return df.ix[start_date.strftime('%Y-%m-%d'):end_date.strftime('%Y-%m-%d')]
 
 
