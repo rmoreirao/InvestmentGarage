@@ -13,7 +13,7 @@ class MovingStd(BaseIndicatorSingCol):
     def __init__(self,window:int):
         self.window = window
 
-    def get_column_name(self):
+    def get_ind_column_name(self):
         return "MovSTD_" + str(self.window)
 
     def calculate_ind(self, df: pd.DataFrame,symbol:str):

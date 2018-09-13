@@ -27,4 +27,14 @@ for index, row in df_quotes.iterrows():
 
        rand_portfolio.add_order(order(type,'AAPL',1000,row['4. close'], datetime.strptime(row.name, '%Y-%m-%d')))
 
+
+df_positions = rand_portfolio.calculate_positions_df(start_date,end_date)
+print(df_positions)
+
+last_close_price = df_quotes.tail(1).iloc[0]['4. close']
+
+last_position = df_positions.tail(1).iloc[0]['AAPL']
+
+rand_portfolio.add_order(order(type,'AAPL',last_position,last_close_price, end_date))
+
 print(rand_portfolio.calculate_positions_df(start_date,end_date))

@@ -19,7 +19,7 @@ class BollingerBandsBase(BaseIndicatorMultCol):
         self.window = window
 
     def get_column_names(self):
-        return [self.UPPER_BAND, self.LOWER_BAND,self.sm_indicator_calc.get_column_name()]
+        return [self.UPPER_BAND, self.LOWER_BAND, self.sm_indicator_calc.get_ind_column_name()]
 
     def calculate_ind(self, df: pd.DataFrame, symbol: str):
         mov_std = MovingStd(self.window)

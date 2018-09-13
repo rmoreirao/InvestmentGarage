@@ -9,7 +9,7 @@ class SimpleMovingAvg(BaseIndicatorSingCol):
     def __init__(self,n_periods:int):
         self.n_periods = n_periods
 
-    def get_column_name(self):
+    def get_ind_column_name(self):
         return "SMA_" + str(self.n_periods)
 
     def calculate_ind(self, df: pd.DataFrame,symbol:str):
@@ -20,7 +20,7 @@ class ExponentialMovingAvg(BaseIndicatorSingCol):
     def __init__(self,n_periods:int):
         self.n_periods = n_periods
 
-    def get_column_name(self):
+    def get_ind_column_name(self):
         return "EMA_" + str(self.n_periods)
 
     def calculate_ind(self, df: pd.DataFrame,symbol:str):
