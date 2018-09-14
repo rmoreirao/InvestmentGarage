@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ec6554c-2651-4f75-8f41-9c83257e1936" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/indicator/test_returns.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/visualization/indicator/test_returns_hist.py" />
+      <change beforePath="$PROJECT_DIR$/.idea/InvestimentGarage.iml" afterPath="$PROJECT_DIR$/.idea/InvestimentGarage.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/backtest/random_strategy.py" afterPath="$PROJECT_DIR$/backtest/random_strategy.py" />
-      <change beforePath="$PROJECT_DIR$/indicator/base_indicator.py" afterPath="$PROJECT_DIR$/indicator/base_indicator.py" />
-      <change beforePath="$PROJECT_DIR$/indicator/bolling_bands.py" afterPath="$PROJECT_DIR$/indicator/bolling_bands.py" />
-      <change beforePath="$PROJECT_DIR$/indicator/moving_avg.py" afterPath="$PROJECT_DIR$/indicator/moving_avg.py" />
-      <change beforePath="$PROJECT_DIR$/indicator/moving_std.py" afterPath="$PROJECT_DIR$/indicator/moving_std.py" />
-      <change beforePath="$PROJECT_DIR$/indicator/returns.py" afterPath="$PROJECT_DIR$/indicator/returns.py" />
-      <change beforePath="$PROJECT_DIR$/test/indicator/test_moving_avg.py" afterPath="$PROJECT_DIR$/test/indicator/test_moving_avg.py" />
+      <change beforePath="$PROJECT_DIR$/test/indicator/test_moving_avg.py" afterPath="$PROJECT_DIR$/visualization/indicator/test_moving_avg.py" />
+      <change beforePath="$PROJECT_DIR$/test/indicator/test_returns.py" afterPath="$PROJECT_DIR$/visualization/indicator/test_returns.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,8 +21,8 @@
       <file leaf-file-name="quotes_manager.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manager/quotes_manager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="43" column="24" lean-forward="true" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
+            <state relative-caret-position="0">
+              <caret line="43" column="24" lean-forward="false" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -36,7 +33,7 @@
       <file leaf-file-name="random_strategy.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backtest/random_strategy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
+            <state relative-caret-position="315">
               <caret line="21" column="40" lean-forward="false" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
               <folding />
             </state>
@@ -46,8 +43,8 @@
       <file leaf-file-name="portfolio.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/domain/portfolio.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="39" column="67" lean-forward="true" selection-start-line="39" selection-start-column="67" selection-end-line="39" selection-end-column="67" />
+            <state relative-caret-position="714">
+              <caret line="39" column="67" lean-forward="false" selection-start-line="39" selection-start-column="67" selection-end-line="39" selection-end-column="67" />
               <folding />
             </state>
           </provider>
@@ -56,7 +53,7 @@
       <file leaf-file-name="order.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/domain/order.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
+            <state relative-caret-position="42">
               <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
               <folding />
             </state>
@@ -64,10 +61,10 @@
         </entry>
       </file>
       <file leaf-file-name="test_moving_avg.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/indicator/test_moving_avg.py">
+        <entry file="file://$PROJECT_DIR$/visualization/indicator/test_moving_avg.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="14">
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding>
                 <element signature="e#1#30#0" expanded="true" />
               </folding>
@@ -75,11 +72,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_returns.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/indicator/test_returns.py">
+      <file leaf-file-name="test_returns.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/visualization/indicator/test_returns.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="24" column="56" lean-forward="true" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
+            <state relative-caret-position="420">
+              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -87,11 +84,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="frame.py" pinned="false" current-in-tab="false">
-        <entry file="file://C:/Program Files/Python36/Lib/site-packages/pandas/core/frame.py">
+      <file leaf-file-name="test_returns_hist.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/visualization/indicator/test_returns_hist.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="4163" column="8" lean-forward="false" selection-start-line="4163" selection-start-column="8" selection-end-line="4163" selection-end-column="8" />
+            <state relative-caret-position="287">
+              <caret line="24" column="58" lean-forward="true" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -100,10 +97,11 @@
       <file leaf-file-name="base_indicator.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/indicator/base_indicator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="19" column="38" lean-forward="false" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
+            <state relative-caret-position="420">
+              <caret line="22" column="27" lean-forward="false" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
+                <marker date="1536936257645" expanded="true" signature="81:115" ph="..." />
               </folding>
             </state>
           </provider>
@@ -112,7 +110,7 @@
       <file leaf-file-name="returns.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/indicator/returns.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
+            <state relative-caret-position="441">
               <caret line="27" column="38" lean-forward="false" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
               <folding />
             </state>
@@ -122,8 +120,8 @@
       <file leaf-file-name="bollinger_bands_tutorial.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/indicator/bollinger_bands_tutorial.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="45" column="37" lean-forward="true" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
+            <state relative-caret-position="903">
+              <caret line="45" column="37" lean-forward="false" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -200,6 +198,8 @@
         <option value="$PROJECT_DIR$/indicator/base_indicator.py" />
         <option value="$PROJECT_DIR$/indicator/returns.py" />
         <option value="$PROJECT_DIR$/test/indicator/test_returns.py" />
+        <option value="$PROJECT_DIR$/visualization/indicator/test_returns.py" />
+        <option value="$PROJECT_DIR$/visualization/indicator/test_returns_hist.py" />
       </list>
     </option>
   </component>
@@ -224,8 +224,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -236,67 +234,44 @@
             <path>
               <item name="InvestmentGarage" type="b2602c69:ProjectViewProjectNode" />
               <item name="InvestmentGarage" type="462c0819:PsiDirectoryNode" />
-              <item name="backtest" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="InvestmentGarage" type="b2602c69:ProjectViewProjectNode" />
               <item name="InvestmentGarage" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="visualization" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="InvestmentGarage" type="b2602c69:ProjectViewProjectNode" />
               <item name="InvestmentGarage" type="462c0819:PsiDirectoryNode" />
+              <item name="visualization" type="462c0819:PsiDirectoryNode" />
               <item name="indicator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="InvestmentGarage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="InvestmentGarage" type="462c0819:PsiDirectoryNode" />
-              <item name="manager" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="InvestmentGarage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="InvestmentGarage" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="InvestmentGarage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="InvestmentGarage" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="InvestmentGarage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="InvestmentGarage" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="indicator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="InvestmentGarage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="InvestmentGarage" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/visualization" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Git\InvestmentGarage\test\indicator" />
-      <recent name="C:\Git\InvestmentGarage\indicators" />
-      <recent name="C:\Git\InvestmentGarage\backtest" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\LocalDev\GitHub\InvestmentGarage\visualization" />
       <recent name="C:\Git\InvestmentGarage\indicator" />
       <recent name="C:\Git\InvestmentGarage\backtest" />
       <recent name="C:\Git\InvestmentGarage\quotes_cache" />
       <recent name="C:\Git\InvestmentGarage" />
-      <recent name="C:\Git\InvestimentGarage\manager" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\LocalDev\GitHub\InvestmentGarage\visualization\indicator" />
+      <recent name="C:\Git\InvestmentGarage\test\indicator" />
+      <recent name="C:\Git\InvestmentGarage\indicators" />
+      <recent name="C:\Git\InvestmentGarage\backtest" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -311,25 +286,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test_returns">
-    <configuration name="bolling_bands" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/indicator" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="InvestimentGarage" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/indicator/bolling_bands.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
+  <component name="RunManager" selected="Python.test_returns_hist">
     <configuration name="quotes_manager" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -402,20 +359,38 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="test_returns_hist" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/visualization/indicator" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="InvestimentGarage" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/visualization/indicator/test_returns_hist.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.bolling_bands" />
-      <item index="1" class="java.lang.String" itemvalue="Python.test_moving_avg" />
-      <item index="2" class="java.lang.String" itemvalue="Python.quotes_manager" />
-      <item index="3" class="java.lang.String" itemvalue="Python.random_strategy" />
-      <item index="4" class="java.lang.String" itemvalue="Python.test_returns" />
+      <item index="0" class="java.lang.String" itemvalue="Python.test_moving_avg" />
+      <item index="1" class="java.lang.String" itemvalue="Python.quotes_manager" />
+      <item index="2" class="java.lang.String" itemvalue="Python.random_strategy" />
+      <item index="3" class="java.lang.String" itemvalue="Python.test_returns" />
+      <item index="4" class="java.lang.String" itemvalue="Python.test_returns_hist" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.test_returns" />
-        <item index="1" class="java.lang.String" itemvalue="Python.test_moving_avg" />
-        <item index="2" class="java.lang.String" itemvalue="Python.random_strategy" />
-        <item index="3" class="java.lang.String" itemvalue="Python.quotes_manager" />
-        <item index="4" class="java.lang.String" itemvalue="Python.bolling_bands" />
+        <item index="0" class="java.lang.String" itemvalue="Python.test_returns_hist" />
+        <item index="1" class="java.lang.String" itemvalue="Python.test_returns" />
+        <item index="2" class="java.lang.String" itemvalue="Python.test_moving_avg" />
+        <item index="3" class="java.lang.String" itemvalue="Python.random_strategy" />
+        <item index="4" class="java.lang.String" itemvalue="Python.quotes_manager" />
       </list>
     </recent_temporary>
   </component>
@@ -436,20 +411,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
     <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.184375" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41530055" sideWeight="0.50208336" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32755905" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41417322" sideWeight="0.49791667" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18455882" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41311476" sideWeight="0.49791667" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -457,6 +428,9 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -467,7 +441,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test/indicator/test_moving_avg.py</url>
+          <url>file://$PROJECT_DIR$/visualization/indicator/test_moving_avg.py</url>
           <line>1</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
@@ -538,17 +512,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://C:/Program Files/Python36/Lib/site-packages/pandas/core/generic.py" />
-    <entry file="file://$PROJECT_DIR$/manager/quotes_manager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Program Files/Python36/Lib/site-packages/alpha_vantage/timeseries.py" />
     <entry file="file://C:/Program Files/Python36/Lib/site-packages/pandas/core/indexes/base.py" />
     <entry file="file://$PROJECT_DIR$/backtest/compare_returns.py" />
@@ -662,7 +625,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="7" column="28" lean-forward="false" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -670,27 +632,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://C:/Program Files (x86)/Python/Lib/site-packages/pandas/io/common.py" />
-    <entry file="file://$PROJECT_DIR$/util/cache_util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="4" lean-forward="false" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2017.3/system/python_stubs/-1120166012/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80206">
-          <caret line="4718" column="0" lean-forward="false" selection-start-line="4718" selection-start-column="0" selection-end-line="4718" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/util/cache_util.py" />
+    <entry file="file://$USER_HOME$/.PyCharmCE2017.3/system/python_stubs/-1120166012/builtins.py" />
     <entry file="file://$PROJECT_DIR$/indicator/bolling_bands.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
@@ -713,16 +660,16 @@
     <entry file="file://$PROJECT_DIR$/backtest/compare_returns.py" />
     <entry file="file://$PROJECT_DIR$/indicator/bollinger_bands_tutorial.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="45" column="37" lean-forward="true" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
+        <state relative-caret-position="903">
+          <caret line="45" column="37" lean-forward="false" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/manager/quotes_manager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="43" column="24" lean-forward="true" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
+        <state relative-caret-position="0">
+          <caret line="43" column="24" lean-forward="false" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
@@ -731,7 +678,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/domain/order.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
+        <state relative-caret-position="42">
           <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
           <folding />
         </state>
@@ -739,7 +686,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backtest/random_strategy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
+        <state relative-caret-position="315">
           <caret line="21" column="40" lean-forward="false" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
           <folding />
         </state>
@@ -747,55 +694,65 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/domain/portfolio.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="39" column="67" lean-forward="true" selection-start-line="39" selection-start-column="67" selection-end-line="39" selection-end-column="67" />
+        <state relative-caret-position="714">
+          <caret line="39" column="67" lean-forward="false" selection-start-line="39" selection-start-column="67" selection-end-line="39" selection-end-column="67" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/indicator/test_moving_avg.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="e#1#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files/Python36/Lib/site-packages/pandas/core/frame.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="4163" column="8" lean-forward="false" selection-start-line="4163" selection-start-column="8" selection-end-line="4163" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/pandas/core/frame.py" />
     <entry file="file://$PROJECT_DIR$/indicator/base_indicator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="19" column="38" lean-forward="false" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
+        <state relative-caret-position="420">
+          <caret line="22" column="27" lean-forward="false" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
+            <marker date="1536936257645" expanded="true" signature="81:115" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/indicator/returns.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
+        <state relative-caret-position="441">
           <caret line="27" column="38" lean-forward="false" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/indicator/test_returns.py">
+    <entry file="file://C:/Program Files (x86)/Python/Lib/site-packages/matplotlib/pyplot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="24" column="56" lean-forward="true" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
+        <state relative-caret-position="105">
+          <caret line="235" column="4" lean-forward="false" selection-start-line="235" selection-start-column="4" selection-end-line="235" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visualization/indicator/test_moving_avg.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#1#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visualization/indicator/test_returns.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visualization/indicator/test_returns_hist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="24" column="58" lean-forward="true" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
+          <folding />
         </state>
       </provider>
     </entry>
