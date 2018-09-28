@@ -30,16 +30,16 @@ def __get_quotes_cache_folder():
 
 # _get_quotes_cache_folder = memoize(__get_quotes_cache_folder)
 
-def get_daily_quotes(start_date: datetime, end_date: datetime, symbol:str):
+def get_daily_quotes(start_date: datetime, end_date: datetime, symbol:str, use_cache=True):
     quotes_cache_path:Path = __get_quotes_cache_folder()
     quotes_cache_path = quotes_cache_path / 'quotes_cache' / (symbol + '.pkl')
     file_path =  quotes_cache_path.as_posix()
     df: pd.DataFrame
-    if Path(file_path).is_file():
+    if Path(file_path).is_file() and use_cache:
         df = pd.read_pickle(file_path)
     else:
         ts = TimeSeries(key='ZXTHHYQU7E5O8R75', output_format='pandas')
-        df, meta_data = ts.get_daily_adjusted(symbol=symbol, outputsize='compact')
+        df, meta_data = ts.get_daily_adjusted(symbol=symbol, outputsize='full')
         try:
             df.to_pickle(file_path)
         except:

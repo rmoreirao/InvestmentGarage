@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from indicator.returns import AbsoluteReturn, DailyReturn, CummulativeReturn
+from indicator.returns import NormalizedDailyReturn, DailyReturn, CummulativeReturn
 from manager import quotes_manager
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -24,7 +24,7 @@ end_date = datetime(2018, 8, 15)
 
 fig, axes = plt.subplots(nrows=3, ncols=1,figsize=(15,15))
 
-test_returns(['SPX','AAPL','MSFT'],start_date,end_date,AbsoluteReturn(),axes[0])
+test_returns(['SPX','AAPL','MSFT'], start_date, end_date, NormalizedDailyReturn(), axes[0])
 test_returns(['SPX','AAPL','MSFT'],start_date,end_date,CummulativeReturn(),axes[1])
 test_returns(['SPX','AAPL','MSFT'],start_date,end_date,DailyReturn(),axes[2])
 
