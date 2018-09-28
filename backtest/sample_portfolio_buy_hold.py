@@ -1,12 +1,12 @@
 from datetime import datetime
 
-from indicator.returns import NormalizedDailyReturn
+from indicator.returns import NormalizedDailyReturn, DailyReturn, CummulativeDailyReturn
 from manager import quotes_manager
 import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
 
 def calculate_portifolio(start_portfolio_value,start_date,end_date, symbols,allocations,use_quotes_cache=True):
-    global df_normalized_returns, df_allocations, df_position_value, df_portfolio_value
     df_quotes = pd.DataFrame(index=pd.date_range(start_date, end_date))
     for symbol in symbols:
         df_temp = quotes_manager.get_daily_quotes(start_date, end_date, symbol, use_cache=use_quotes_cache)
@@ -21,6 +21,23 @@ def calculate_portifolio(start_portfolio_value,start_date,end_date, symbols,allo
     df_allocations = df_normalized_returns * allocations
     df_position_value = df_allocations * start_portfolio_value
     df_portfolio_value = df_position_value.sum(axis=1)
+
+    day_ret = DailyReturn()
+    day_ret_series = day_ret.calculate_ind_series(df_portfolio_value)
+    avg_daily_return = day_ret_series.mean()
+    # Risk, Vol
+    std_daily_return = day_ret_series.std()
+    end_value = df_portfolio_value.iloc[-1]
+    cum_return = (end_value/start_portfolio_value) - 1
+    rf = 0.
+    sharpe = np.sqrt(252)*((avg_daily_return-rf)/std_daily_return)
+
+    print('Statistics for ' + str(symbols))
+    print('avg_daily_return = ' + str(avg_daily_return))
+    print('std_daily_return = ' + str(std_daily_return))
+    print('end_value = ' + str(end_value))
+    print('cum_return = ' + str(cum_return))
+    print('sharpe = ' + str(sharpe))
 
     return df_quotes,df_normalized_returns,df_allocations,df_position_value,df_portfolio_value
 
@@ -53,14 +70,7 @@ df_quotes_spx,df_normalized_returns_spx,df_allocations_spx,df_position_value_spx
 # plt.title('df_portfolio_value')
 # plt.show()
 
-plt.figure(figsize=(15,10))
-ax1 = df_portfolio_value.plot(color='Blue',label='Portifolio')
-ax2 = df_portfolio_value_spx.plot(color='Red',label='SPX',secondary_y=True)
-
-h1, l1 = ax1.get_legend_handles_labels()
-h2, l2 = ax2.get_legend_handles_labels()
-
+df_portifolio_value_compare = df_portfolio_value.to_frame('Portifolio').join(df_portfolio_value_spx.to_frame('SPX'))
+df_portifolio_value_compare.plot(figsize=(15,10))
 plt.title('Portifolio x SPX')
-
-
 plt.show()

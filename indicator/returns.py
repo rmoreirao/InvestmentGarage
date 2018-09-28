@@ -10,6 +10,13 @@ class DailyReturn(BaseIndicatorSingCol):
     def get_ind_column_name(self):
         return "DAYRET"
 
+    def calculate_ind_series(self, series: pd.Series):
+        # see https://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.pct_change.html for example
+        # (t/t-1) - 1
+        day_ret = series.pct_change()
+        day_ret[0] = 0
+        return day_ret
+
     def calculate_ind(self, df: pd.DataFrame, symbol: str):
         # see https://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.pct_change.html for example
         # (t/t-1) - 1
@@ -20,6 +27,11 @@ class DailyReturn(BaseIndicatorSingCol):
 class CummulativeDailyReturn(BaseIndicatorSingCol):
     def get_ind_column_name(self):
         return "CUMRET"
+
+    # sum of daily returns
+    def calculate_ind_series(self, series: pd.Series):
+        day_ret = DailyReturn()
+        return day_ret.calculate_ind_series(series).fillna(0).cumsum()
 
     # sum of daily returns
     def calculate_ind(self, df: pd.DataFrame, symbol: str):
