@@ -11,7 +11,6 @@ from pathlib import Path,WindowsPath
 # data[['4. close']].plot()
 # plt.title('Intraday Times Series for the MSFT stock (1 min)')
 # plt.show()
-from util.cache_util import memoize
 
 COL_DATE = 'date'
 COL_OPEN = '1. open'
