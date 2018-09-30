@@ -6,13 +6,26 @@ import scipy.optimize as spo
 
 from datetime import datetime
 
+import sys
+
 from indicator.returns import NormalizedDailyReturn, DailyReturn, CummulativeDailyReturn
 from manager import quotes_manager
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-def calculate_portifolio(start_portfolio_value,start_date,end_date, symbols,use_quotes_cache=True):
+
+def find_sharpe_allocation(allocs, df_normalized_returns_param):
+    df_allocations = df_normalized_returns_param * (allocs / 100)
+    df_portfolio_value = df_allocations.sum(axis=1)
+    portifolio_daily_ret = df_portfolio_value.pct_change().dropna()
+    avg_daily_return = portifolio_daily_ret.mean()
+    std_daily_return = portifolio_daily_ret.std()
+    sharpe = np.sqrt(252) * ((avg_daily_return - 0.0) / std_daily_return)
+    return sharpe * -1
+
+
+def calculate_portifolio(start_portfolio_value,start_date,end_date, symbols, allocations=[],use_quotes_cache=True):
     df_quotes = pd.DataFrame(index=pd.date_range(start_date, end_date))
     for symbol in symbols:
         df_temp = quotes_manager.get_daily_quotes(start_date, end_date, symbol, use_cache=use_quotes_cache)
@@ -25,28 +38,21 @@ def calculate_portifolio(start_portfolio_value,start_date,end_date, symbols,use_
         df_normalized_returns = df_normalized_returns.join(norm_ret.calculate_ind_series(df_quotes[symbol]))
     df_normalized_returns.dropna(inplace=True)
 
-    def find_best_allocation(allocs):
-        df_allocations = df_normalized_returns * (allocs / 100)
-        df_portfolio_value = df_allocations.sum(axis=1)
-        portifolio_daily_ret = df_portfolio_value.pct_change().dropna()
-        avg_daily_return = portifolio_daily_ret.mean()
-        std_daily_return = portifolio_daily_ret.std()
-        sharpe = np.sqrt(252) * ((avg_daily_return - 0.0) / std_daily_return)
-        return sharpe * -1
+    if not allocations or len(allocations) == 0:
+        # guess allocation, just a simple distribution
+        guess_alloc = np.full(len(symbols), 100 / len(symbols))
 
-    # guess allocation, just a simple distribution
-    guess_alloc = np.full(len(symbols), 100 / len(symbols))
+        # limiting the values to be from 0 to 100
+        bounds = [(0, 100) for x in range(len(symbols))]
 
-    # limiting the values to be from 0 to 100
-    bounds = [(0, 100) for x in range(len(symbols))]
-
-    # only satisfied when sum of elements is 1.
-    cons = ({'type': 'eq', 'fun': lambda x: 100 - np.sum(x)})
-    result = spo.minimize(find_best_allocation, guess_alloc, bounds=bounds, constraints=cons, method='SLSQP',
-                          options={'disp': True})
-    allocations = result.x / 100
-    print('Calculated Sharpe = ' + str(result.fun))
-    print('Calculated Allocations = ' + str(allocations))
+        # only satisfied when sum of elements is 1.
+        cons = ({'type': 'eq', 'fun': lambda x: 100 - np.sum(x)})
+        result = spo.minimize(find_sharpe_allocation, guess_alloc, args=(df_normalized_returns), bounds=bounds, constraints=cons, method='SLSQP',
+                              options={'disp': True})
+        allocations = result.x / 100
+        print('Calculated Sharpe = ' + str(result.fun))
+        print('Calculated Allocations = ')
+        np.savetxt(sys.stdout, allocations, '%5.2f')
 
     df_allocations = df_normalized_returns * allocations
     df_position_value = df_allocations * start_portfolio_value
@@ -76,16 +82,18 @@ start_portfolio_value = 1000000.0
 start_date = datetime(2017, 1, 1)
 end_date = datetime(2017, 12, 30)
 symbols = ['GOOG', 'AAPL', 'GLD' , 'XOM']
-allocations = [0.4,0.4,0.1,0.1]
+allocs = [0.4,0.4,0.1,0.1]
+df_quotes,df_normalized_returns,df_allocations,df_position_value,df_portfolio_value = calculate_portifolio(start_portfolio_value,start_date,end_date,symbols,allocations=allocs)
 
-df_quotes,df_normalized_returns,df_allocations,df_position_value,df_portfolio_value = calculate_portifolio(start_portfolio_value,start_date,end_date, symbols)
+df_quotes_opt,df_normalized_returns_opt,df_allocations_opt,df_position_value_opt,df_portfolio_value_opt = calculate_portifolio(start_portfolio_value,start_date,end_date,symbols)
 
 symbols_spx = ['SPX']
 allocations_spx = [1]
 
 df_quotes_spx,df_normalized_returns_spx,df_allocations_spx,df_position_value_spx,df_portfolio_value_spx = calculate_portifolio(start_portfolio_value,start_date,end_date, symbols_spx)
 
-df_portifolio_value_compare = df_portfolio_value.to_frame('Portifolio').join(df_portfolio_value_spx.to_frame('SPX'))
+df_portifolio_value_compare = df_portfolio_value.to_frame('Portifolio Non Opt').join(df_portfolio_value_spx.to_frame('SPX'))
+df_portifolio_value_compare = df_portifolio_value_compare.join(df_portfolio_value_opt.to_frame('Portifolio Opt Sharpe'))
 df_portifolio_value_compare.plot(figsize=(15,10))
-plt.title('Portifolio x SPX')
+plt.title('Portifolio x Opt x SPX')
 plt.show()
